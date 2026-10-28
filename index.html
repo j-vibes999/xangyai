@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="lo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ຊ້າງໃຫຍ່ ໂຢເກີດ</title>
+<meta name="description" content="ຊ້າງໃຫຍ່ ໂຢເກີດ ຄວາມສຸກ ທຸກຊ່ວງເວລາ">
+<meta name="theme-color" content="#EDE9E2">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="/img/closed-mango.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@400;500;600;700&family=Noto+Serif+Lao:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-DVAJXzLG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CYbLwQ-7.css">
+</head>
+<body data-page="cup">
+  <button class="sound" id="sound" type="button" aria-pressed="false">
+    <svg class="sound-ico" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="spk" d="M4 9.5h3.2L12 5.6v12.8l-4.8-3.9H4z"/>
+      <path class="wave w1" d="M15.2 9.2a4 4 0 0 1 0 5.6"/>
+      <path class="wave w2" d="M17.8 6.6a7.6 7.6 0 0 1 0 10.8"/>
+      <path class="mute" d="M15.5 9.5l5 5m0-5l-5 5"/>
+    </svg>
+    <span class="sound-label">ເປີດສຽງ</span>
+  </button>
+
+  <!-- Page 1: the cup. Pull the lid, touch the yogurt, scroll a little to scoop. -->
+  <main class="page page-cup" id="pageCup" aria-label="ຊ້າງໃຫຍ່ ໂຢເກີດ">
+    <div class="stage" id="stage">
+      <canvas class="stage-gl" id="stageGl" aria-hidden="true"></canvas>
+
+      <button class="lid" id="lid" type="button" aria-label="ເປີດຝາ">
+        <img src="/img/lid-mango.webp" alt="" draggable="false" width="1090" height="578">
+      </button>
+
+      <div class="hero-copy" id="heroCopy">
+        <h1 class="wordmark" aria-label="ຊ້າງໃຫຍ່ ໂຢເກີດ">
+          <span class="wm-main" aria-hidden="true">ຊ້າງໃຫຍ່</span>
+          <span class="wm-sub" aria-hidden="true">ໂຢເກີດ</span>
+        </h1>
+        <p class="tagline">ຄວາມສຸກ ທຸກຊ່ວງເວລາ</p>
+      </div>
+
+      <nav class="actions" id="actions" aria-label="ເມນູ">
+        <button class="btn-ghost" type="button" data-sheet="sheetFlavors">ລົດຊາດ</button>
+        <button class="btn-ghost" type="button" data-sheet="sheetAbout">ກ່ຽວກັບເຮົາ</button>
+        <a class="btn-gold" href="#find" data-go="find">ຊອກຫາຊ້າງໃຫຍ່</a>
+      </nav>
+
+      <p class="hint hint-pull" id="hintPull" aria-hidden="true">
+        <svg viewBox="0 0 24 40" aria-hidden="true"><path d="M12 36V6m0 0L4 14m8-8l8 8"/></svg>
+        <span>ດຶງຝາຂຶ້ນ</span>
+      </p>
+      <p class="hint hint-open" id="hintOpen" aria-hidden="true">
+        <span class="hint-touch">ລອງແຕະໂຢເກີດເບິ່ງ</span>
+        <span class="hint-scroll">ເລື່ອນລົງ ເພື່ອຕັກ<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+      </p>
+      <h2 class="cap-scoop" id="capScoop">ຕັກຄຳໃຫຍ່ໆ ໄດ້ເລີຍ</h2>
+    </div>
+  </main>
+
+  <!-- Page 2: find the gold fridge. -->
+  <main class="page page-find" id="pageFind" aria-labelledby="findTitle" hidden>
+    <header class="find-bar">
+      <a class="btn-back" href="#cup" data-go="cup">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>ກັບຄືນ</span>
+      </a>
+    </header>
+    <div class="find-grid">
+      <section class="find-art" aria-label="ຕູ້ສີທອງ ແລະ ຊ້າງໃຫຍ່">
+        <h1 class="find-title" id="findTitle">ຊອກຫາຕູ້ສີທອງ</h1>
+        <p class="find-line"><span class="nw">ເຫັນຕູ້ສີທອງລາຍຊ້າງ</span> <span class="nw">ແມ່ນມີຊ້າງໃຫຍ່ເຢັນໆ</span> <span class="nw">ລໍຖ້າຢູ່</span></p>
+        <div class="fridge-set">
+          <img class="fridges" src="/img/fridges-cut.webp" alt="ຕູ້ເຢັນສີທອງລາຍຊ້າງ ຂອງຊ້າງໃຫຍ່" width="930" height="1021">
+          <div class="mascot-wrap">
+            <p class="bubble" id="bubble" aria-live="polite">ສະບາຍດີ!</p>
+            <button class="mascot" id="mascot" type="button" aria-label="ແຕະຊ້າງໃຫຍ່ ໃຫ້ລົມນຳ">
+              <img src="/img/mascot.png" alt="" width="270" height="384" draggable="false">
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="find-map" aria-labelledby="mapTitle">
+        <div class="map-head">
+          <h2 id="mapTitle">ຈຸດຕັ້ງຕູ້</h2>
+          <p>ນະຄອນຫຼວງວຽງຈັນ</p>
+        </div>
+        <div class="map-frame">
+          <iframe id="mapFrame" title="ແຜນທີ່ Google" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="place-now">
+          <p class="place-name" id="placeName" aria-live="polite"></p>
+          <a class="btn-gold btn-sm" id="placeGo" target="_blank" rel="noopener">ນຳທາງໄປທີ່ນີ້</a>
+        </div>
+        <ul class="places" id="places" aria-label="ລາຍຊື່ຈຸດຕັ້ງຕູ້"></ul>
+      </section>
+    </div>
+    <footer class="foot">
+      <span class="foot-mark">ຊ້າງໃຫຍ່</span>
+      <span>ຄວາມສຸກ ທຸກຊ່ວງເວລາ</span>
+      <small>© 2026 Chang Yai Dairy</small>
+    </footer>
+  </main>
+
+  <!-- Sheets opened from page 1 -->
+  <dialog class="sheet sheet-flavors" id="sheetFlavors" aria-labelledby="flavorName">
+    <button class="sheet-close" type="button" data-close aria-label="ປິດ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="flavor-stage" id="flavorStage">
+      <!-- the frame is the whole photo; on phones it is shifted so the cup sits in the middle -->
+      <div class="flavor-frame">
+        <img class="scene" id="sceneA" src="/img/scene-mango.webp" alt="" width="1376" height="768">
+        <img class="scene" id="sceneB" src="/img/scene-mango.webp" alt="" width="1376" height="768">
+        <img class="drop-lid" id="dropLid" src="/img/lid-cheese.webp" alt="" width="1092" height="582">
+      </div>
+    </div>
+    <div class="flavor-copy" data-flavor="mango">
+      <h2 class="flavor-name" id="flavorName">ນົມໝາກມ່ວງ</h2>
+      <p class="flavor-desc" id="flavorDesc">ຫວານຫອມ ໝາກມ່ວງສຸກ</p>
+      <div class="switch" role="group" aria-label="ເລືອກລົດຊາດ">
+        <span class="switch-blob" aria-hidden="true"></span>
+        <button type="button" data-flavor="mango" aria-pressed="true"><img src="/img/pieces/mango-3.webp" alt="" width="26" height="26"><span>ໝາກມ່ວງ</span></button>
+        <button type="button" data-flavor="cheese" aria-pressed="false"><img src="/img/pieces/cheese-2.webp" alt="" width="26" height="26"><span>ຊີສ</span></button>
+      </div>
+      <!-- from the printed cup label; switches with the flavor (src/sheets.js) -->
+      <ul class="specs" aria-label="ຂໍ້ມູນ">
+        <li><b>80 ກ.</b><span>ໜຶ່ງຖ້ວຍ</span></li>
+        <li><b id="specKcal">125</b><span>ກິໂລແຄລໍຣີ</span></li>
+        <li><b>2–4°C</b><span>ເກັບໃນຕູ້ເຢັນ</span></li>
+      </ul>
+      <h3 class="ingr-title">ສ່ວນປະກອບສຳຄັນ</h3>
+      <ul class="ingr" id="ingr"></ul>
+    </div>
+  </dialog>
+
+  <dialog class="sheet sheet-about" id="sheetAbout" aria-labelledby="aboutTitle">
+    <button class="sheet-close" type="button" data-close aria-label="ປິດ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <!-- the mascot stands on a gold arch shaped like the plaque on the cup label -->
+    <div class="about-art">
+      <div class="arch" aria-hidden="true"></div>
+      <img class="about-mascot" src="/img/mascot.png" alt="ມາສະຄອດຊ້າງໃຫຍ່" width="270" height="384">
+      <p class="seal"><b>100%</b><span>ຜະລິດໃນລາວ</span></p>
+    </div>
+    <div class="about-copy">
+      <h2 id="aboutTitle">ກ່ຽວກັບຊ້າງໃຫຍ່</h2>
+      <p class="about-lead"><span class="nw">ໂຢເກີດເນື້ອແໜ້ນ</span> <span class="nw">ຈາກນ້ຳນົມງົວ</span> <span class="nw">ຜະລິດທີ່ນະຄອນຫຼວງວຽງຈັນ</span></p>
+      <h3 class="about-sub">ສອງລົດຊາດ</h3>
+      <div class="coins">
+        <button class="coin" type="button" data-open-flavor="mango"><span class="coin-face"><img src="/img/lid-mango.jpg" alt="" width="80" height="80"></span><span>ນົມໝາກມ່ວງ</span></button>
+        <button class="coin" type="button" data-open-flavor="cheese"><span class="coin-face"><img src="/img/lid-cheese.jpg" alt="" width="80" height="80"></span><span>ນົມຊີສ</span></button>
+      </div>
+      <dl class="facts facts-compact">
+        <div><dt>ຜະລິດໂດຍ</dt><dd>ບໍລິສັດ ເອັມວີເອັມ ກຣຸບ ຈຳກັດ</dd></div>
+        <div><dt>ຜະລິດທີ່</dt><dd><span class="nw">ບ້ານ ດອນໜູນ,</span> <span class="nw">ເມືອງໄຊເສດຖາ,</span> <span class="nw">ນະຄອນຫຼວງວຽງຈັນ</span></dd></div>
+      </dl>
+      <a class="fridge-tile" href="#find" data-go="find">
+        <img src="/img/fridges-cut.webp" alt="" width="930" height="1021">
+        <span class="fridge-tile-text"><span class="nw">ເຫັນຕູ້ສີທອງລາຍຊ້າງ</span> <span class="nw">ແມ່ນມີຊ້າງໃຫຍ່ເຢັນໆ</span> <span class="nw">ລໍຖ້າຢູ່</span></span>
+        <span class="btn-gold btn-sm">ຊອກຫາຊ້າງໃຫຍ່</span>
+      </a>
+    </div>
+  </dialog>
+
+  <!-- page switch: a gold lid closes over the screen, then lifts off the new page -->
+  <div class="wipe" id="wipe" aria-hidden="true">
+    <div class="wipe-lid"><img src="/img/lid-round.webp" alt=""></div>
+  </div>
+
+</body>
+</html>

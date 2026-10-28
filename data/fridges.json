@@ -1,0 +1,12 @@
+[
+  { "name": "ປະຕູໄຊ", "lat": 17.9707, "lng": 102.6186, "flavor": "mango" },
+  { "name": "ພະທາດຫຼວງ", "lat": 17.9763, "lng": 102.6335, "flavor": "cheese" },
+  { "name": "ຕະຫຼາດເຊົ້າ", "lat": 17.9655, "lng": 102.6136, "flavor": "mango" },
+  { "name": "ສວນເຈົ້າອະນຸວົງ", "lat": 17.9620, "lng": 102.6056, "flavor": "cheese" },
+  { "name": "ວັດສີເມືອງ", "lat": 17.9616, "lng": 102.6247, "flavor": "mango" },
+  { "name": "ໂພນທັນ", "lat": 17.9790, "lng": 102.6470, "flavor": "cheese" },
+  { "name": "ດົງໂດກ", "lat": 18.0338, "lng": 102.6383, "flavor": "mango" },
+  { "name": "ສະໜາມບິນວັດໄຕ", "lat": 17.9884, "lng": 102.5633, "flavor": "cheese" },
+  { "name": "ໜອງດ້ວງ", "lat": 17.9745, "lng": 102.5955, "flavor": "mango" },
+  { "name": "ສີສັດຕະນາກ", "lat": 17.9430, "lng": 102.6230, "flavor": "cheese" }
+]
